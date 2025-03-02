@@ -55,10 +55,11 @@
 2. Resposta esperada da API (HTTP 202):
    ```bash
    {
-  "message": "Tarefa enfileirada com sucesso!"
+   "message": "Tarefa enfileirada com sucesso!"
    }
 ### 🔍 Verificar o Processamento da Mensagem
 1. O script `consume.js` será responsável por consumir a mensagem da fila Redis e salvar os dados no MongoDB.
+
 2. Para confirmar, acesse o contêiner MongoDB:
    ```bash
    docker exec -it mongodb mongosh
@@ -72,15 +73,16 @@
 ## 📦 Scripts Adicionais
 
 ### Iniciar o Consumidor
+
 Se necessário, o consumidor (`consume.js`) pode ser executado manualmente:
    ```bash
    npm run consume
-
+   ```
 ### Parar os Contêineres
 Quando terminar de usar a aplicação, você pode parar os contêineres com:
    ```bash
    docker-compose down
-
+   ```
 ## 🗂 Licença
 
 Este projeto é desenvolvido para fins acadêmicos, como parte da disciplina de Sistemas Distribuídos.
