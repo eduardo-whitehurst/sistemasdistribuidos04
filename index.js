@@ -7,7 +7,10 @@ const app = express();
 app.use(express.json());
 
 // Configuração do Redis
-const redis = new Redis(); // Por padrão, conecta na porta 6379 do localhost
+const redis = new Redis({
+  host: 'redis', // Nome do serviço no Docker Compose
+  port: 6379
+});
 redis.on("connect", () => console.log("Redis conectado!"));
 redis.on("error", (err) => console.error("Erro ao conectar ao Redis:", err));
 
