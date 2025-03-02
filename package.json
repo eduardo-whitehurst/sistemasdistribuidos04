@@ -1,0 +1,16 @@
+{
+    "name": "sistemasdistribuidos04",
+    "version": "1.0.0",
+    "description": "Uma API com Endpoint Assíncrono e Message Broker utilizando Node.js, Redis e MongoDB",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js",
+      "consume": "node consume.js"
+    },
+    "dependencies": {
+      "express": "^4.18.2",
+      "ioredis": "^5.3.1",
+      "mongoose": "^7.2.3"
+    }
+  }
+  
